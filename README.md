@@ -1,13 +1,23 @@
 # HL-NOTIFICATION
 
 
+### create a webhook url in google chat
+<UL>
+ <LI> Go to the hangout in gmail and create a space </LI>
+ <LI>Go to Apps & integrations for the space</LI>
+ <LI>Click on Add Webhooks</LI>
+ <LI>Name the Chat app name and click Save</LI>
+ <LI>Copy the Webhook link and use it in the next steps</LI>
+</UL>
+
+<br />
 
 ## Steps to crate a use the Notification Library
 
 ### 1. Initialize the notification class by your config
 ```
      HlNotification hlNotification = new HlNotification(
-                new Config("https://chat.googleapis.com/v1/spaces/...",
+                new Config("[Webhook Link] https://chat.googleapis.com/v1/spaces/...",
                         "SC-APP")
      );
 ```
@@ -37,7 +47,7 @@ thread to send messages
 <br /> <br /> <br />
 
 
-## Example
+## Live Example
 ```
         HlNotification hlNotification = new HlNotification(
                 new Config("https://chat.googleapis.com/v1/spaces...",
