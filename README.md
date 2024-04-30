@@ -34,6 +34,43 @@ thread to send messages
     hlNotification.refreshCache(MessageIdentification.SC_PRICE_NOTIFICATION.name()))
     
 ```
-<br /> <br /> <br /> <br /> <br /> <br /> <br /> 
+<br /> <br /> <br />
+
+
+## Example
+```
+        HlNotification hlNotification = new HlNotification(
+                new Config("https://chat.googleapis.com/v1/spaces...",
+                        "SC-APP")
+        );
+
+        hlNotification.sendMessageToGoogleChat(new Message("SC-First Message"), MessageIdentification.SC_PRICE_NOTIFICATION.name())
+                .doOnNext(System.out::println)
+                .flatMap(res1 -> hlNotification.sendMessageToGoogleChat(new Message("First Message")))
+                .doOnNext(System.out::println)
+                .flatMap(res1 -> {
+                    try {
+                        Thread.sleep(60000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    return hlNotification.sendMessageToGoogleChat(new Message("SC-Second Message"), MessageIdentification.SC_PRICE_NOTIFICATION.name());
+                })
+                .doOnNext(System.out::println)
+                .flatMap(res1 -> {
+                    try {
+                        Thread.sleep(60000);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    return hlNotification.sendMessageToGoogleChat(new Message("Second Message"));
+                })
+                .doOnNext(System.out::println)
+                .flatMap(res1 -> hlNotification.refreshCache())
+                .flatMap(it -> hlNotification.refreshCache(MessageIdentification.SC_PRICE_NOTIFICATION.name()))
+                .doOnNext(System.out::println)
+                .block();
+```
+
 
 
