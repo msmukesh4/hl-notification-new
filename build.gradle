@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.hl.notification'
-version = 'v1'
+version = 'v1.1'
 
 gradlePlugin {
     website = 'https://github.com/homelane/hl-notification-new/blob/main/README.md'
