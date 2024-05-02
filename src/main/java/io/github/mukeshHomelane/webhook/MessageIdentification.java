@@ -1,4 +1,4 @@
-package com.hl.notification.webhook;
+package io.github.mukeshHomelane.webhook;
 
 public enum MessageIdentification {
 

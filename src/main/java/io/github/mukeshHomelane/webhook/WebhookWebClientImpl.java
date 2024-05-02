@@ -1,9 +1,9 @@
-package com.hl.notification.webhook;
+package io.github.mukeshHomelane.webhook;
 
 import com.google.gson.Gson;
-import com.hl.notification.HlNotification;
-import com.hl.notification.message.Message;
-import com.hl.notification.util.CommonUtils;
+import io.github.mukeshHomelane.HlNotification;
+import io.github.mukeshHomelane.message.Message;
+import io.github.mukeshHomelane.util.CommonUtils;
 import reactor.core.publisher.Mono;
 
 import java.net.URI;

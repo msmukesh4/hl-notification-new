@@ -1,4 +1,4 @@
-package com.hl.notification;
+package io.github.mukeshHomelane;
 
 public class Main {
     public static void main(String[] args) {

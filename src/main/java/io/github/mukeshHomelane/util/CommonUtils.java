@@ -1,4 +1,4 @@
-package com.hl.notification.util;
+package io.github.mukeshHomelane.util;
 
 import com.google.gson.Gson;
 

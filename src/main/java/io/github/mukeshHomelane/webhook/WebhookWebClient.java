@@ -1,6 +1,6 @@
-package com.hl.notification.webhook;
+package io.github.mukeshHomelane.webhook;
 
-import com.hl.notification.message.Message;
+import io.github.mukeshHomelane.message.Message;
 import reactor.core.publisher.Mono;
 
 

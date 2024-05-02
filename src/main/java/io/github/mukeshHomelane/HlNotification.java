@@ -1,10 +1,10 @@
-package com.hl.notification;
+package io.github.mukeshHomelane;
 
 
-import com.hl.notification.message.Message;
-import com.hl.notification.webhook.MessageIdentification;
-import com.hl.notification.webhook.WebhookWebClient;
-import com.hl.notification.webhook.WebhookWebClientImpl;
+import io.github.mukeshHomelane.message.Message;
+import io.github.mukeshHomelane.webhook.MessageIdentification;
+import io.github.mukeshHomelane.webhook.WebhookWebClient;
+import io.github.mukeshHomelane.webhook.WebhookWebClientImpl;
 import reactor.core.publisher.Mono;
 
 public class HlNotification {

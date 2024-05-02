@@ -1,7 +1,7 @@
-import com.hl.notification.Config;
-import com.hl.notification.HlNotification;
-import com.hl.notification.message.Message;
-import com.hl.notification.webhook.MessageIdentification;
+import io.github.mukeshHomelane.Config;
+import io.github.mukeshHomelane.HlNotification;
+import io.github.mukeshHomelane.message.Message;
+import io.github.mukeshHomelane.webhook.MessageIdentification;
 
 public class TestHLNotification {
     public static void main(String[] args) {

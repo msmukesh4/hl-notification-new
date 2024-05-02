@@ -1,7 +1,7 @@
-package com.hl.notification;
+package io.github.mukeshHomelane;
 
-import com.hl.notification.message.MessageChannel;
-import com.hl.notification.util.CommonUtils;
+import io.github.mukeshHomelane.message.MessageChannel;
+import io.github.mukeshHomelane.util.CommonUtils;
 
 import java.util.List;
 

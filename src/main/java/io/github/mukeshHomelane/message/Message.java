@@ -1,4 +1,4 @@
-package com.hl.notification.message;
+package io.github.mukeshHomelane.message;
 
 import java.util.UUID;
 

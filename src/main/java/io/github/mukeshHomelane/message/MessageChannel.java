@@ -1,4 +1,4 @@
-package com.hl.notification.message;
+package io.github.mukeshHomelane.message;
 
 public enum MessageChannel {
 

@@ -13,7 +13,7 @@ gradlePlugin {
 
     plugins {
         hlNotificationPlugin {
-            id = 'com.hl.notification.webhook'
+            id = 'io.github.mukesh-homelane.webhook'
             displayName = 'Notification Plugin'
             description = 'This plugin helps you send hangout notifications from java applications'
             tags.set(['google webhook', 'Hangout notification', 'homelane', 'notification'])
