@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.hl.notification'
+group = 'io.github.mukeshHomelane'
 version = 'v1.1'
 
 gradlePlugin {
