@@ -1,4 +1,4 @@
-package io.github.mukeshHomelane.message;
+package io.github.msmukesh4.message;
 
 import java.util.UUID;
 
