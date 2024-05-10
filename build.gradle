@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'io.github.msmukesh4'
-version = 'v1.1'
+version = 'v1.2'
 
 gradlePlugin {
     website = 'https://github.com/msmukesh4/hl-notification-new/blob/main/README.md'
