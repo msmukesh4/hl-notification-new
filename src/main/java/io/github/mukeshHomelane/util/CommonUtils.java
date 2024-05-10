@@ -1,4 +1,4 @@
-package io.github.msmukesh4.util;
+package io.github.mukeshHomelane.util;
 
 import com.google.gson.Gson;
 

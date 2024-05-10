@@ -1,7 +1,7 @@
-package io.github.msmukesh4;
+package io.github.mukeshHomelane;
 
-import io.github.msmukesh4.message.MessageChannel;
-import io.github.msmukesh4.util.CommonUtils;
+import io.github.mukeshHomelane.message.MessageChannel;
+import io.github.mukeshHomelane.util.CommonUtils;
 
 import java.util.List;
 

@@ -11,6 +11,7 @@ gradlePlugin {
     website = 'https://github.com/msmukesh4/hl-notification-new/blob/main/README.md'
     vcsUrl = 'https://github.com/msmukesh4/hl-notification-new'
 
+
     plugins {
         hlNotificationPlugin {
             id = 'io.github.msmukesh4.webhook'

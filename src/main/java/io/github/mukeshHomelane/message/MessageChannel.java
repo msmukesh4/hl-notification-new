@@ -1,4 +1,4 @@
-package io.github.msmukesh4.message;
+package io.github.mukeshHomelane.message;
 
 public enum MessageChannel {
 
