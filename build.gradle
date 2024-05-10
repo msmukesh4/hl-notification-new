@@ -4,20 +4,20 @@ plugins {
     id 'java'
 }
 
-group = 'io.github.mukeshHomelane'
+group = 'io.github.msmukesh4'
 version = 'v1.1'
 
 gradlePlugin {
-    website = 'https://github.com/homelane/hl-notification-new/blob/main/README.md'
-    vcsUrl = 'https://github.com/homelane/hl-notification-new'
+    website = 'https://github.com/msmukesh4/hl-notification-new/blob/main/README.md'
+    vcsUrl = 'https://github.com/msmukesh4/hl-notification-new'
 
     plugins {
         hlNotificationPlugin {
-            id = 'io.github.mukeshHomelane.webhook'
+            id = 'io.github.msmukesh4.webhook'
             displayName = 'Notification Plugin'
             description = 'This plugin helps you send hangout notifications from java applications'
             tags.set(['google webhook', 'Hangout notification', 'homelane', 'notification'])
-            implementationClass = 'io.github.mukeshHomelane.HlNotification'
+            implementationClass = 'io.github.msmukesh4.HlNotification'
         }
     }
 }
