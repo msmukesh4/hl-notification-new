@@ -1,5 +1,8 @@
 # HL-NOTIFICATION
 
+### Intro
+This is a Library this is helps you integrate with google webhook library.
+You can sue this library to send high priority information to a hangout group chat directly.
 
 ### create a webhook url in google chat
 <UL>
