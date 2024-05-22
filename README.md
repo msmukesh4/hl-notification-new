@@ -10,7 +10,7 @@ You can download the jar from https://hl-nucleus-dev.s3.ap-south-1.amazonaws.com
   in your build.gradle file add this
 dependencies {
      ...
-     implementation files('./src/main/resources/HL-Notification-v1.jar');
+     implementation files('./src/main/resources/HL-Notification-v1.2.jar');
 }
 ```
 
