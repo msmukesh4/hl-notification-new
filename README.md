@@ -4,6 +4,16 @@
 This is a Library this is helps you integrate with google webhook library.
 You can sue this library to send high priority information to a hangout group chat directly.
 
+You can download the jar from https://hl-nucleus-dev.s3.ap-south-1.amazonaws.com/HL-Notification-v1.2.jar and add it in you local resources  folder of your application. 
+
+```
+  in your build.gradle file add this
+dependencies {
+     ...
+     implementation files('./src/main/resources/HL-Notification-v1.jar');
+}
+```
+
 ### create a webhook url in google chat
 <UL>
  <LI> Go to the hangout in gmail and create a space </LI>
