@@ -29,7 +29,7 @@ public class TestHLNotification {
                 .doOnNext(System.out::println)
                 .block();*/
 
-        hlNotification.sendMessageToGoogleChat(new Message("SC-First Message"), MessageIdentification.SC_PRICE_NOTIFICATION.name())
+        /*hlNotification.sendMessageToGoogleChat(new Message("SC-First Message"), MessageIdentification.SC_PRICE_NOTIFICATION.name())
                 .doOnNext(System.out::println)
                 .flatMap(res1 -> hlNotification.sendMessageToGoogleChat(new Message("First Message")))
                 .doOnNext(System.out::println)
@@ -54,7 +54,9 @@ public class TestHLNotification {
                 .flatMap(res1 -> hlNotification.refreshCache())
                 .flatMap(it -> hlNotification.refreshCache(MessageIdentification.SC_PRICE_NOTIFICATION.name()))
                 .doOnNext(System.out::println)
-                .block();
+                .block();*/
+
+        hlNotification.sendMessageToGoogleChatAsync(new Message("Test"));
     }
 
 }
