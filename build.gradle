@@ -40,6 +40,8 @@ dependencies {
 
     implementation "io.projectreactor:reactor-core:3.6.0"
     testImplementation "io.projectreactor:reactor-test:3.6.0"
+
+    implementation 'com.sun.mail:jakarta.mail:2.0.1'
 }
 
 test {

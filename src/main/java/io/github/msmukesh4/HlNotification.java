@@ -1,13 +1,18 @@
 package io.github.msmukesh4;
 
 
+import io.github.msmukesh4.email.EmailSender;
+import io.github.msmukesh4.message.EmailMessage;
 import io.github.msmukesh4.message.Message;
 import io.github.msmukesh4.webhook.MessageIdentification;
 import io.github.msmukesh4.webhook.WebhookWebClient;
 import io.github.msmukesh4.webhook.WebhookWebClientImpl;
+import jakarta.mail.MessagingException;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
+
+import java.io.IOException;
 
 public class HlNotification {
 
@@ -17,12 +22,15 @@ public class HlNotification {
 
     private final Scheduler scheduler;
 
+    private final EmailSender emailSender;
+
 
     public HlNotification(Config config){
         config.webhookUrl = config.webhookUrl + "&messageReplyOption=REPLY_MESSAGE_FALLBACK_TO_NEW_THREAD";
         HlNotification.config = config;
         webhookWebClient = new WebhookWebClientImpl();
         scheduler = Schedulers.newSingle("Notif-Thread");
+        emailSender = new EmailSender(config.mailUsername, config.mailAppPassword);
     }
 
     /**
@@ -64,6 +72,12 @@ public class HlNotification {
         return refreshCache(MessageIdentification.OTHERS.name());
     }
 
+    public void refreshCacheAsync(){
+        refreshCache(MessageIdentification.OTHERS.name())
+                .subscribeOn(scheduler)
+                .subscribe();
+    }
+
     /**
      * When we are replying to a particular thread and we want to stop it and initiate a new message
      * so we need to first clear the message thread.
@@ -72,5 +86,16 @@ public class HlNotification {
      */
     public Mono<String> refreshCache(String key){
         return webhookWebClient.refreshCache(key);
+    }
+
+    public void sendEmail(EmailMessage emailMessage){
+        try {
+            emailSender.sendEmail(emailMessage);
+            System.out.println("Email sent successfully using Gmail SMTP!");
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
